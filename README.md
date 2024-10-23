@@ -110,40 +110,6 @@ Vid2Aud is compatible with the following operating systems:
 - `print_success_message()`: Prints an ASCII success message when the script completes.
 - `print_no_files_message()`: Prints an ASCII message if no video files are found in the input folder.
 
-### Example Code Excerpts
-
-#### `video_to_audio` Function
-```py
-def video_to_audio(video_path, audio_path, codec, format_choice):
-    ffmpeg_path = os.path.join(os.path.dirname(__file__), 'ffmpeg.exe')
-    command = [
-        ffmpeg_path,
-        '-i', video_path,
-        '-vn',  # No video
-        '-acodec', codec,  # Use the selected codec
-    ]
-    if codec in ['libfdk_aac', 'libshine', 'libtwolame']:
-        command.extend(['-strict', '-2'])
-    command.append(audio_path)
-    result = subprocess.run(command, capture_output=True, text=True, encoding='utf-8')
-    if result.returncode != 0:
-        raise subprocess.CalledProcessError(result.returncode, command, output=result.stdout, stderr=result.stderr)
-```
-
-#### `print_starter_message` Function
-```py
-def print_starter_message():
-    starter_message = r"""
-   ________                                         __              __     ____                           __ 
-  / ____/ /_  ____  ____  ________     ____  __  __/ /_____  __  __/ /_   / __/___  _________ ___  ____ _/ /_
- / /   / __ \/ __ \/ __ \/ ___/ _ \   / __ \/ / / / __/ __ \/ / / / __/  / /_/ __ \/ ___/ __ `__ \/ __ `/ __/
-/ /___/ / / / /_/ / /_/ (__  )  __/  / /_/ / /_/ / /_/ /_/ / /_/ / /_   / __/ /_/ / /  / / / / / / /_/ / /_  
-\____/_/ /_/\____/\____/____/\___/   \____/\__,_/\__/ .___/\__,_/\__/  /_/  \____/_/  /_/ /_/ /_/\__,_/\__/  
-                                                   /_/                                                       
-    """
-    console.print(Panel(starter_message, style="bold green"))
-```
-
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
