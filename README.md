@@ -1,6 +1,14 @@
 # Vid2Aud
 This project is a Python-based, multiplatform tool that converts video files to audio files using the FFmpeg library. It supports multiple audio codecs and formats, and provides a user-friendly command-line interface with progress tracking.
 
+<p align="center">
+  <img src="./screenshots/dialog1.png" alt="Vid2Aud Logo" width="90%">
+</p>
+
+<p align="center">
+  <img src="./screenshots/success.png" alt="Vid2Aud Logo" width="90%">
+</p>
+
 ## Compatibility
 
 Vid2Aud is compatible with the following operating systems:
