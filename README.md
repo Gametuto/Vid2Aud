@@ -9,14 +9,14 @@ This project is a Python-based, multiplatform tool that converts video files to 
   <img src="./screenshots/success.png" alt="Vid2Aud Logo" width="90%">
 </p>
 
-## Compatibility
+## 🖥️ Compatibility
 
 Vid2Aud is compatible with the following operating systems:
 - Windows
 - Linux
 - Mac
 
-## Features
+## ✨ Features
 
 - [x] Convert video files to audio files
 - [x] Support for multiple audio codecs (e.g., `libfdk_aac`, `libshine`, `libtwolame`)
@@ -25,13 +25,13 @@ Vid2Aud is compatible with the following operating systems:
 - [x] Multi-threaded processing for faster conversion
 - [ ] Choose a specific audio codec
 
-## Requirements
+## 📋 Requirements
 
 - Python 3.6+
 - FFmpeg executable (`ffmpeg.exe` for Windows, `ffmpeg` for Linux/Mac)
 - Required Python packages: `rich`, `inquirer`
 
-## Installation
+## 📦 Installation
 
 1. Clone the repository:
     ```sh
@@ -88,7 +88,7 @@ Vid2Aud is compatible with the following operating systems:
         sudo port install ffmpeg # Via MacPorts
         ```
 
-## Usage
+## 🚀 Usage
 
 1. Place your video files in the `videoInput` folder.
 
@@ -118,14 +118,14 @@ Vid2Aud is compatible with the following operating systems:
 - `print_success_message()`: Prints an ASCII success message when the script completes.
 - `print_no_files_message()`: Prints an ASCII message if no video files are found in the input folder.
 
-## License
+## 📄 License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## Contributing
+## 🤝 Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
 
-## Contact
+## 📧 Contact
 
 For any questions or suggestions, please contact [gametutoytb@gmail.com](mailto:gametutoytb@gmail.com).
