@@ -118,7 +118,7 @@ if __name__ == "__main__":
     # Ask the user for the desired audio format
     questions = [
         inquirer.List('format',
-                      message="Choose the audio format",
+                      message="Choose the audio format (use arrow keys to navigate, then press Enter)",
                       choices=audio_extensions,
                       ),
     ]
