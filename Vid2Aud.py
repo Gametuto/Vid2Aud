@@ -1,6 +1,7 @@
 import subprocess
 import os
 import shutil
+import sys
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from rich.console import Console
 from rich.progress import Progress, BarColumn, TextColumn, TimeRemainingColumn
@@ -89,7 +90,7 @@ if __name__ == "__main__":
     ffmpeg_path = get_ffmpeg_path()
     if ffmpeg_path == 'ffmpeg' and not shutil.which('ffmpeg'):
         print_ffmpeg_not_found_message()
-        exit(1)
+        sys.exit(1)
 
     # Define the list of video file extensions to process
     video_extensions = [
@@ -105,7 +106,7 @@ if __name__ == "__main__":
     # Check if there are no video files
     if not files:
         print_no_files_message()
-        exit(1)
+        sys.exit(1)
 
     # Print starter message
     print_starter_message()
