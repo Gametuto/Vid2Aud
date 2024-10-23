@@ -59,7 +59,6 @@ def print_success_message():
   \__ \/ / / / ___/ ___/ _ \/ ___/ ___/
  ___/ / /_/ / /__/ /__/  __(__  |__  ) 
 /____/\__,_/\___/\___/____/____/____/  
-
     """
     console.print(Panel(success_message, style="bold green"))
 
@@ -73,7 +72,7 @@ Stopping the script.
 def print_ffmpeg_not_found_message():
     ffmpeg_not_found_message = r"""
 FFmpeg executable not found in the project directory or system PATH.
-Please ensure ffmpeg.exe is available.
+Please ensure ffmpeg is available.
 Stopping the script.
     """
     console.print(Panel(ffmpeg_not_found_message, style="bold red"))
@@ -86,7 +85,7 @@ if __name__ == "__main__":
     os.makedirs(input_folder, exist_ok=True)
     os.makedirs(output_folder, exist_ok=True)
 
-    # Check if ffmpeg.exe is in the project directory or system PATH
+    # Check if ffmpeg is in the project directory or system PATH
     ffmpeg_path = get_ffmpeg_path()
     if ffmpeg_path == 'ffmpeg' and not shutil.which('ffmpeg'):
         print_ffmpeg_not_found_message()
