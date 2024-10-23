@@ -118,6 +118,31 @@ Vid2Aud is compatible with the following operating systems:
 - `print_success_message()`: Prints an ASCII success message when the script completes.
 - `print_no_files_message()`: Prints an ASCII message if no video files are found in the input folder.
 
+## 🛠️ Build
+
+To build the project into an executable for Windows, follow these steps:
+
+1. **Install PyInstaller**:
+    ```sh
+    pip install pyinstaller
+    ```
+
+2. **Create the executable**:
+    Use PyInstaller to create a single executable file. Run the following command in the root directory of the repo:
+    ```sh
+    pyinstaller --onefile --add-data "ffmpeg.exe;." --collect-all readchar Vid2Aud.py
+    ```
+
+3. **Locate the executable**:
+    After the build process is complete, you will find the executable in the `dist` directory.
+
+4. **Run the executable**:
+    Navigate to the `dist` directory and run the executable:
+    ```sh
+    cd dist
+    Vid2Aud.exe
+    ```
+
 ## 📄 License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
