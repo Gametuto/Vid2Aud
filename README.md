@@ -7,6 +7,8 @@
 
 This project is a Python-based, multiplatform tool that converts video files to audio files using the FFmpeg library. It supports multiple audio codecs and formats, and provides a user-friendly command-line interface with progress tracking.
 
+I've made this project for personal training but i want to share it. Why not...
+
 <p align="center">
   <img src="./screenshots/dialog1.png" alt="Vid2Aud Logo" width="90%">
 </p>
